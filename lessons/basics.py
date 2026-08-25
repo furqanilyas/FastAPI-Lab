@@ -1,5 +1,5 @@
-from fastapi import FastAPI
-from models import Product
+from fastapi import FastAPI, HTTPException
+from lessons.models import Product
 
 app = FastAPI()
 
@@ -37,3 +37,11 @@ def get_price(id: int):
         if item.id == id:
             return {"id": item.id, "price": item.price}
     return "No product found"
+
+@app.post("/product")
+def add_product(product: Product):
+    for item in product_list:
+        if product.id == item.id:
+            raise HTTPException(status_code=409, detail="Product already exists")
+    product_list.append(product)
+    return product
