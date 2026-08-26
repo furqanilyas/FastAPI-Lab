@@ -45,3 +45,12 @@ def add_product(product: Product):
             raise HTTPException(status_code=409, detail="Product already exists")
     product_list.append(product)
     return product
+
+@app.put("/product/{id}")
+def update_product(id: int, product: Product):
+    for i in range(len(product_list)):
+        if product_list[i].id == id:
+            product.id = id
+            product_list[i] = product
+            return "Product updated successfully"
+    return "product not found"
