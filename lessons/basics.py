@@ -36,7 +36,7 @@ def get_price(id: int):
     for item in product_list:
         if item.id == id:
             return {"id": item.id, "price": item.price}
-    return "No product found"
+    return "Product not found"
 
 @app.post("/product")
 def add_product(product: Product):
@@ -53,4 +53,12 @@ def update_product(id: int, product: Product):
             product.id = id
             product_list[i] = product
             return "Product updated successfully"
-    return "product not found"
+    return "Product not found"
+
+@app.delete("/product")
+def delete_product(id: int):
+    for i in range(len(product_list)):
+        if product_list[i].id == id:
+            del product_list[i]
+            return "Product deleted successfully"
+    return "Product not found"
