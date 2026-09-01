@@ -1,15 +1,25 @@
-# FastAPI Learning 
+# FastAPI Lab
 
-A collection of my **FastAPI practice code** while learning backend development with Python.
+My learning repo for FastAPI, following along with practicing concepts hands-on as I build out a backend development foundation. This repo will keep growing as I go deeper into FastAPI.
 
-### What I'm Learning
+## Topics
 
-* FastAPI basics
-* Routes & HTTP methods
-* Request & response handling
-* Pydantic models
-* Query & path parameters
+Covers FastAPI fundamentals and beyond, including (but not limited to):
 
-All code is organized inside the lessons/ folder.
+- App basics & routing
+- Pydantic models
+- Path & query parameters
+- Enums
+- CRUD operations
+- Response models
+- ...and more as the learning continues
 
-This is an ongoing learning repository. I'll keep adding new lessons, practice code, and projects as I continue learning FastAPI.
+## Tech
+
+- Python
+- FastAPI
+- Pydantic
+
+## Notes
+
+This repo is focused purely on FastAPI. Other backend topics (SQL, PostgreSQL, SQLAlchemy, etc.) are tracked in separate repos as part of a broader backend learning path.
