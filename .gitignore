@@ -1,3 +1,2 @@
-#Ignored files
-
 .idea/
+lessons/__pycache__/
